@@ -1,1 +1,4 @@
-portfolio-amin.com
+Type: Cname
+Nom: www
+Cible: portfolio-amin.github.io
+TTL: Automatique ou 3600 secondes
