@@ -31,79 +31,145 @@
     <a class="brand" href="index.html" aria-label="Amin Darouiche, accueil">AD<span class="brand-dot">.</span></a>
     <nav aria-label="Navigation principale">
       <a href="index.html" aria-current="page">Accueil</a>
-      <a href="about.html">À propos</a>
       <a href="services.html">Services</a>
-      <a href="gallery.html">Méthode</a>
+      <a href="diagnostic.html">Diagnostic</a>
+      <a href="about.html">À propos</a>
       <a href="contact.html">Contact</a>
       <a class="nav-cta" href="reservation.html">Rendez-vous</a>
     </nav>
   </header>
 
+  <a class="announcement-strip" href="diagnostic.html"><span>Nouveau</span> Testez votre hygiène numérique avec le diagnostic confidentiel <strong aria-hidden="true">→</strong></a>
+
   <main id="main-content">
     <section class="hero">
-      <p class="eyebrow">Web · cybersécurité · assistance</p>
-      <h1>Une informatique claire, fiable et sécurisée.</h1>
-      <p class="hero-copy">J'aide les particuliers, indépendants et petites structures à créer leur présence en ligne, améliorer leur sécurité numérique et résoudre leurs problèmes techniques sans jargon inutile.</p>
-      <div class="actions">
-        <a class="button button-primary" href="reservation.html">Demander un rendez-vous</a>
-        <a class="button button-secondary" href="services.html">Voir les services</a>
+      <div class="hero-copy-panel">
+        <p class="eyebrow">Web · cybersécurité · assistance</p>
+        <h1>Votre expert numérique, sans la complexité inutile.</h1>
+        <p class="hero-copy">Sites web performants, conseil en sécurité et assistance informatique pour les particuliers, indépendants et petites structures.</p>
+        <div class="actions">
+          <a class="button button-primary" href="reservation.html">Parler de mon projet <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="#services-title">Explorer les solutions</a>
+        </div>
+        <ul class="trust-list" aria-label="Principes de service">
+          <li>Réponse humaine</li>
+          <li>Périmètre transparent</li>
+          <li>Sécurité autorisée</li>
+        </ul>
       </div>
-      <ul class="trust-list" aria-label="Principes de service">
-        <li>Solutions adaptées</li>
-        <li>Explications compréhensibles</li>
-        <li>Sécurité avec autorisation</li>
-      </ul>
+      <figure class="hero-brand-card">
+        <picture><source srcset="og-site.webp" type="image/webp"><img src="og.png" width="1200" height="630" alt="Identité visuelle Amin Darouiche, web, cybersécurité et assistance" fetchpriority="high" decoding="async"></picture>
+        <figcaption><span class="live-dot" aria-hidden="true"></span>Architecture légère · aucun tracker · aucun compte</figcaption>
+      </figure>
     </section>
 
-    <section class="section" aria-labelledby="services-title">
+    <section class="proof-rail" aria-label="Caractéristiques vérifiables du site">
+      <p><strong>0</strong><span>tracker publicitaire</span></p>
+      <p><strong>0</strong><span>cookie marketing</span></p>
+      <p><strong>4</strong><span>étapes de réservation</span></p>
+      <p><strong>1</strong><span>interlocuteur humain</span></p>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="services-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Services</p>
-          <h2 id="services-title">Un accompagnement numérique à taille humaine</h2>
+          <p class="eyebrow">Choisissez votre point de départ</p>
+          <h2 id="services-title">Une expertise, trois parcours concrets</h2>
         </div>
-        <p class="section-intro">Un interlocuteur unique pour cadrer le besoin, construire la solution et vous expliquer comment l'utiliser.</p>
+        <p class="section-intro">Explorez chaque solution. Le contenu et le prochain rendez-vous s'adaptent immédiatement à votre besoin.</p>
       </div>
-      <div class="card-grid">
-        <article class="card">
-          <span class="card-number" aria-hidden="true">01</span>
-          <h3>Création de sites web</h3>
-          <p>Sites vitrines rapides et responsive pour présenter une activité, un projet ou des services.</p>
-          <a class="text-link" href="services.html#web">Découvrir l'offre web</a>
-        </article>
-        <article class="card">
-          <span class="card-number" aria-hidden="true">02</span>
-          <h3>Conseil en sécurité</h3>
-          <p>Diagnostic de base, bonnes pratiques, durcissement et plan d'amélioration priorisé.</p>
-          <a class="text-link" href="services.html#securite">Voir le périmètre</a>
-        </article>
-        <article class="card">
-          <span class="card-number" aria-hidden="true">03</span>
-          <h3>Assistance informatique</h3>
-          <p>Aide au choix, configuration, dépannage et accompagnement pour gagner en autonomie.</p>
-          <a class="text-link" href="services.html#assistance">Consulter les possibilités</a>
+
+      <div class="solution-lab" data-solution-lab>
+        <div class="solution-tabs" role="tablist" aria-label="Parcours de service">
+          <button type="button" role="tab" aria-selected="true" aria-controls="solution-panel" id="tab-web" data-solution="web">
+            <span>01</span><strong>Créer un site</strong><small>Concevoir · lancer · améliorer</small>
+          </button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="solution-panel" id="tab-security" data-solution="security" tabindex="-1">
+            <span>02</span><strong>Renforcer la sécurité</strong><small>Évaluer · prioriser · protéger</small>
+          </button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="solution-panel" id="tab-support" data-solution="support" tabindex="-1">
+            <span>03</span><strong>Résoudre un problème</strong><small>Diagnostiquer · expliquer · stabiliser</small>
+          </button>
+        </div>
+
+        <article class="solution-panel" id="solution-panel" role="tabpanel" aria-labelledby="tab-web" tabindex="0">
+          <div class="solution-panel-top"><span class="solution-code" data-solution-code>WEB / 01</span><span class="status-pill" data-solution-status>Projet cadré</span></div>
+          <h3 data-solution-title>Un site qui explique votre valeur et transforme les visites en demandes.</h3>
+          <p data-solution-description>Architecture claire, interface responsive, performance, accessibilité et référencement technique sans dépendances superflues.</p>
+          <ul class="solution-deliverables" data-solution-list>
+            <li>Structure et parcours de conversion</li>
+            <li>Design adapté au mobile</li>
+            <li>Mise en ligne et documentation</li>
+          </ul>
+          <div class="actions">
+            <a class="button button-primary" data-solution-booking href="reservation.html?service=web">Préparer ce projet <span aria-hidden="true">→</span></a>
+            <a class="text-link" data-solution-more href="services.html#web">Voir le périmètre détaillé</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="section process" aria-labelledby="process-title">
-      <div>
-        <p class="eyebrow">Méthode</p>
-        <h2 id="process-title">Du besoin à une solution utilisable</h2>
+    <section class="section" aria-labelledby="tools-title">
+      <div class="section-heading compact-heading">
+        <div><p class="eyebrow">Outils utiles dès maintenant</p><h2 id="tools-title">Essayez l'expertise avant de réserver</h2></div>
+        <p class="section-intro">Pas de faux logos ni de témoignages inventés : des outils vérifiables et une méthode visible.</p>
       </div>
-      <ol class="process-list">
-        <li><strong>Écouter</strong><span>Comprendre votre contexte, vos priorités et vos contraintes.</span></li>
-        <li><strong>Proposer</strong><span>Présenter une solution claire, son périmètre et les prochaines étapes.</span></li>
-        <li><strong>Réaliser</strong><span>Construire, tester et documenter ce qui a été mis en place.</span></li>
-        <li><strong>Accompagner</strong><span>Vous transmettre les clés pour utiliser et maintenir la solution.</span></li>
+      <div class="experience-grid">
+        <article class="experience-card experience-card-wide security-console-card">
+          <div class="experience-card-head"><span class="status-pill">Interactif</span><span>Diagnostic local</span></div>
+          <h3>Évaluez votre hygiène numérique en moins de trois minutes.</h3>
+          <p>Un questionnaire indicatif analyse mises à jour, accès, sauvegardes et protection des appareils. Les réponses ne quittent jamais votre navigateur.</p>
+          <div class="mini-console" aria-hidden="true">
+            <div><span>Authentification multifacteur</span><i class="console-bar is-strong"></i></div>
+            <div><span>Sauvegardes testées</span><i class="console-bar is-medium"></i></div>
+            <div><span>Mises à jour</span><i class="console-bar"></i></div>
+          </div>
+          <a class="button button-primary" href="diagnostic.html">Lancer le diagnostic <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="experience-card next-slot-card">
+          <div class="experience-card-head"><span class="status-pill">Rendez-vous</span><span>Europe/Brussels</span></div>
+          <p class="big-label" data-next-business-day>Prochain jour ouvré</p>
+          <h3>Un premier échange préparé, pas un formulaire dans le vide.</h3>
+          <p>Choisissez le sujet, le format et un créneau souhaité. La confirmation reste humaine.</p>
+          <a class="text-link" href="reservation.html">Voir les créneaux</a>
+        </article>
+
+        <article class="experience-card trust-card">
+          <div class="experience-card-head"><span class="status-pill">Transparent</span><span>Centre public</span></div>
+          <h3>Contrôles, limites et signalement documentés.</h3>
+          <p>CSP, absence de trackers, validation continue et limites de GitHub Pages sont publiés sans promesse irréaliste.</p>
+          <a class="text-link" href="securite.html">Consulter la sécurité</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="process-title">
+      <div class="section-heading compact-heading">
+        <div><p class="eyebrow">Déroulement</p><h2 id="process-title">Toujours savoir où en est la mission</h2></div>
+        <a class="text-link" href="gallery.html">Découvrir la méthode complète</a>
+      </div>
+      <ol class="delivery-flow">
+        <li><span>01</span><strong>Cadrage</strong><small>Objectif, contraintes, autorisations</small></li>
+        <li><span>02</span><strong>Proposition</strong><small>Périmètre, livrables, priorités</small></li>
+        <li><span>03</span><strong>Réalisation</strong><small>Construction et vérifications</small></li>
+        <li><span>04</span><strong>Transmission</strong><small>Documentation et autonomie</small></li>
       </ol>
     </section>
 
-    <section class="section callout" aria-labelledby="contact-title">
-      <div>
-        <p class="eyebrow">Premier échange</p>
-        <h2 id="contact-title">Parlons de votre projet ou de votre problème informatique.</h2>
+    <section class="section faq-section" aria-labelledby="faq-title">
+      <div><p class="eyebrow">Questions fréquentes</p><h2 id="faq-title">Avant de commencer</h2></div>
+      <div class="faq-list">
+        <details><summary>Le premier échange engage-t-il à acheter ?</summary><p>Non. Il sert à comprendre la situation, vérifier si je peux vous aider et définir une prochaine étape claire.</p></details>
+        <details><summary>Le rendez-vous est-il confirmé immédiatement ?</summary><p>Non. Le site prépare une demande sans stocker vos données ; le créneau devient définitif uniquement après une réponse humaine.</p></details>
+        <details><summary>Pouvez-vous garantir une sécurité parfaite ?</summary><p>Non. Une mission sérieuse réduit les risques, documente les limites et organise les améliorations, mais aucune défense n'est infaillible.</p></details>
+        <details><summary>Intervenez-vous sur n'importe quel système ?</summary><p>Uniquement dans un périmètre autorisé par son propriétaire. Toute action sensible demande une autorisation explicite et vérifiable.</p></details>
       </div>
-      <a class="button button-primary" href="reservation.html">Choisir un créneau</a>
+    </section>
+
+    <section class="section conversion-panel" aria-labelledby="contact-title">
+      <div><p class="eyebrow">Votre prochaine étape</p><h2 id="contact-title">Transformons le problème en plan d'action.</h2><p>Décrivez le contexte une seule fois : la demande préparera directement le bon échange.</p></div>
+      <div class="actions"><a class="button button-primary" href="reservation.html">Démarrer ma demande <span aria-hidden="true">→</span></a><a class="button button-secondary" href="contact.html">Écrire directement</a></div>
     </section>
   </main>
 

@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { dirname, extname, join, normalize, relative, resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
@@ -8,6 +8,8 @@ const requiredFiles = [
   "services.html",
   "gallery.html",
   "contact.html",
+  "diagnostic.html",
+  "diagnostic.js",
   "reservation.html",
   "reservation.js",
   "securite.html",
@@ -16,6 +18,7 @@ const requiredFiles = [
   "robots.txt",
   "sitemap.xml",
   "og.png",
+  "og-site.webp",
   ".nojekyll",
   ".well-known/security.txt",
 ];
@@ -23,6 +26,10 @@ const errors = [];
 
 for (const file of requiredFiles) {
   if (!existsSync(join(root, file))) errors.push(`Fichier requis absent : ${file}`);
+}
+
+if (existsSync(join(root, "og-site.webp")) && statSync(join(root, "og-site.webp")).size > 150_000) {
+  errors.push("og-site.webp : l'image d'accueil dépasse le budget de 150 Ko");
 }
 
 const pages = readdirSync(root)
@@ -44,6 +51,12 @@ for (const page of pages) {
   const ids = [...html.matchAll(/\bid=["']([^"']+)["']/g)].map((match) => match[1]);
   const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
   if (duplicateIds.length) errors.push(`${page} : identifiant dupliqué (${[...new Set(duplicateIds)].join(", ")})`);
+
+  for (const match of html.matchAll(/<img\b[^>]*>/g)) {
+    if (!/\bwidth=["']\d+["']/.test(match[0]) || !/\bheight=["']\d+["']/.test(match[0])) {
+      errors.push(`${page} : image sans dimensions explicites`);
+    }
+  }
 
   for (const match of html.matchAll(/\b(?:href|src)=["']([^"']+)["']/g)) {
     const reference = match[1].trim();

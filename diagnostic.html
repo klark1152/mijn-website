@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Diagnostic express et confidentiel des pratiques de sécurité numérique, calculé directement dans votre navigateur.">
+  <meta property="og:type" content="website"><meta property="og:locale" content="fr_BE">
+  <meta property="og:title" content="Diagnostic sécurité express | Amin Darouiche"><meta property="og:description" content="Évaluez huit pratiques essentielles sans transmettre vos réponses.">
+  <meta property="og:url" content="https://klark1152.github.io/mijn-website/diagnostic.html"><meta property="og:image" content="https://klark1152.github.io/mijn-website/og.png"><meta property="og:image:alt" content="Amin Darouiche — web, cybersécurité et assistance">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Diagnostic sécurité express | Amin Darouiche"><meta name="twitter:description" content="Évaluez huit pratiques essentielles sans transmettre vos réponses."><meta name="twitter:image" content="https://klark1152.github.io/mijn-website/og.png">
+  <title>Diagnostic sécurité express | Amin Darouiche</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="diagnostic.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Amin Darouiche, accueil">AD<span class="brand-dot">.</span></a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="diagnostic.html" aria-current="page">Diagnostic</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="reservation.html">Rendez-vous</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero compact-hero diagnostic-hero">
+      <p class="eyebrow">Outil confidentiel · environ 3 minutes</p>
+      <h1>Où en est votre sécurité numérique ?</h1>
+      <p>Répondez à huit questions essentielles. Le résultat est calculé sur votre appareil : aucune réponse n'est enregistrée ou envoyée.</p>
+    </section>
+
+    <section class="section diagnostic-layout" aria-labelledby="diagnostic-title">
+      <form class="diagnostic-form" id="diagnostic-form">
+        <div class="diagnostic-form-head">
+          <div><p class="eyebrow">Auto-évaluation</p><h2 id="diagnostic-title">Vos pratiques actuelles</h2></div>
+          <p><strong>8</strong> contrôles fondamentaux</p>
+        </div>
+
+        <fieldset class="diagnostic-question" data-recommendation="Activez les mises à jour automatiques et retirez les logiciels qui ne sont plus maintenus.">
+          <legend><span>01</span>Vos appareils et logiciels reçoivent-ils automatiquement leurs mises à jour de sécurité ?</legend>
+          <div class="answer-options"><label><input type="radio" name="updates" value="1" required> Oui</label><label><input type="radio" name="updates" value="0"> Pas encore</label></div>
+        </fieldset>
+        <fieldset class="diagnostic-question" data-recommendation="Activez l'authentification multifacteur, en priorité sur la messagerie, les finances et les comptes administrateurs.">
+          <legend><span>02</span>L'authentification multifacteur protège-t-elle vos comptes les plus importants ?</legend>
+          <div class="answer-options"><label><input type="radio" name="mfa" value="1" required> Oui</label><label><input type="radio" name="mfa" value="0"> Pas encore</label></div>
+        </fieldset>
+        <fieldset class="diagnostic-question" data-recommendation="Utilisez un gestionnaire de mots de passe et un mot de passe unique pour chaque service.">
+          <legend><span>03</span>Utilisez-vous des mots de passe uniques gérés par un outil dédié ?</legend>
+          <div class="answer-options"><label><input type="radio" name="passwords" value="1" required> Oui</label><label><input type="radio" name="passwords" value="0"> Pas encore</label></div>
+        </fieldset>
+        <fieldset class="diagnostic-question" data-recommendation="Mettez en place plusieurs copies de sauvegarde et testez régulièrement une restauration réelle.">
+          <legend><span>04</span>Vos données importantes sont-elles sauvegardées et leur restauration a-t-elle été testée ?</legend>
+          <div class="answer-options"><label><input type="radio" name="backups" value="1" required> Oui</label><label><input type="radio" name="backups" value="0"> Pas encore</label></div>
+        </fieldset>
+        <fieldset class="diagnostic-question" data-recommendation="Activez le chiffrement complet du disque et un verrouillage automatique court sur les appareils mobiles.">
+          <legend><span>05</span>Le stockage de vos ordinateurs et téléphones est-il chiffré et verrouillé automatiquement ?</legend>
+          <div class="answer-options"><label><input type="radio" name="encryption" value="1" required> Oui</label><label><input type="radio" name="encryption" value="0"> Pas encore</label></div>
+        </fieldset>
+        <fieldset class="diagnostic-question" data-recommendation="Limitez les comptes administrateurs et utilisez un compte standard pour les activités quotidiennes.">
+          <legend><span>06</span>Les droits administrateur sont-ils réservés aux actions qui en ont réellement besoin ?</legend>
+          <div class="answer-options"><label><input type="radio" name="privileges" value="1" required> Oui</label><label><input type="radio" name="privileges" value="0"> Pas encore</label></div>
+        </fieldset>
+        <fieldset class="diagnostic-question" data-recommendation="Apprenez à vérifier l'expéditeur, l'adresse du site et les demandes urgentes avant de cliquer ou répondre.">
+          <legend><span>07</span>Savez-vous comment vérifier un message, un lien ou une demande urgente avant d'agir ?</legend>
+          <div class="answer-options"><label><input type="radio" name="phishing" value="1" required> Oui</label><label><input type="radio" name="phishing" value="0"> Pas encore</label></div>
+        </fieldset>
+        <fieldset class="diagnostic-question" data-recommendation="Documentez les comptes, appareils, sauvegardes et personnes à contacter pour pouvoir réagir rapidement.">
+          <legend><span>08</span>Disposez-vous d'une liste à jour de vos appareils, comptes essentiels et contacts d'urgence ?</legend>
+          <div class="answer-options"><label><input type="radio" name="inventory" value="1" required> Oui</label><label><input type="radio" name="inventory" value="0"> Pas encore</label></div>
+        </fieldset>
+
+        <div class="diagnostic-actions">
+          <button class="button button-primary" type="submit">Calculer mon résultat</button>
+          <button class="button button-secondary" type="reset">Recommencer</button>
+        </div>
+        <p class="privacy-hint">Cet outil fournit une orientation générale, pas un audit ni une certification de sécurité.</p>
+      </form>
+
+      <aside class="diagnostic-result" id="diagnostic-result" tabindex="-1" aria-live="polite" aria-label="Résultat du diagnostic">
+        <div class="result-placeholder" data-result-placeholder>
+          <span class="result-orbit" aria-hidden="true">8</span>
+          <h2>Votre résultat apparaîtra ici</h2>
+          <p>Répondez à toutes les questions pour obtenir un score indicatif et trois priorités adaptées.</p>
+        </div>
+        <div data-result-content hidden>
+          <p class="eyebrow">Résultat local</p>
+          <p class="result-score"><strong data-score>0</strong><span>/ 100</span></p>
+          <progress data-score-progress max="100" value="0">0 %</progress>
+          <h2 data-level>Base à consolider</h2>
+          <p data-level-copy></p>
+          <h3>Priorités recommandées</h3>
+          <ol class="result-recommendations" data-recommendations></ol>
+          <a class="button button-primary" href="reservation.html?service=security">Échanger sur ces priorités</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span data-current-year>2026</span> Amin Darouiche.</p>
+    <div class="footer-links"><a href="securite.html">Sécurité</a><a href="confidentialite.html">Confidentialité</a><a href="reservation.html">Rendez-vous</a><a href="https://github.com/klark1152">GitHub</a></div>
+  </footer>
+</body>
+</html>

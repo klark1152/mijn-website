@@ -34,5 +34,6 @@ Exécutez également :
 ```bash
 node --check script.js
 node --check reservation.js
+node --check diagnostic.js
 node scripts/validate-site.mjs
 ```

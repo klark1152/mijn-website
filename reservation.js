@@ -97,6 +97,18 @@
   };
   service.addEventListener("change", updateSecurityAuthorization);
 
+  const requestedService = new URLSearchParams(window.location.search).get("service");
+  const serviceOptions = {
+    discovery: "Appel découverte — 30 min",
+    web: "Projet de site web — 45 min",
+    security: "Conseil en sécurité — 45 min",
+    support: "Assistance informatique — 30 min",
+  };
+  if (requestedService && serviceOptions[requestedService]) {
+    service.value = serviceOptions[requestedService];
+    updateSecurityAuthorization();
+  }
+
   const updateSummary = () => {
     const formattedDate = new Intl.DateTimeFormat("fr-BE", { dateStyle: "long" })
       .format(new Date(`${date.value}T12:00:00`));
