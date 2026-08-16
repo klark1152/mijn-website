@@ -2,14 +2,25 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Création de sites web, conseil en sécurité numérique et assistance informatique pour particuliers, indépendants et petites structures.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_BE">
+  <meta property="og:site_name" content="Amin Darouiche — services informatiques">
+  <meta property="og:title" content="Amin Darouiche | Services informatiques & sécurité">
+  <meta property="og:description" content="Création web, conseil en sécurité numérique et assistance informatique avec une approche claire et responsable.">
+  <meta property="og:url" content="https://klark1152.github.io/mijn-website/">
+  <meta property="og:image" content="https://klark1152.github.io/mijn-website/og.png">
+  <meta property="og:image:alt" content="Amin Darouiche — web, cybersécurité et assistance">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amin Darouiche | Services informatiques & sécurité">
+  <meta name="twitter:description" content="Création web, conseil en sécurité numérique et assistance informatique.">
+  <meta name="twitter:image" content="https://klark1152.github.io/mijn-website/og.png">
   <meta name="author" content="Amin Darouiche">
   <meta name="theme-color" content="#07111f">
   <title>Amin Darouiche | Services informatiques & sécurité</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -24,6 +35,7 @@
       <a href="services.html">Services</a>
       <a href="gallery.html">Méthode</a>
       <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="reservation.html">Rendez-vous</a>
     </nav>
   </header>
 
@@ -33,7 +45,7 @@
       <h1>Une informatique claire, fiable et sécurisée.</h1>
       <p class="hero-copy">J'aide les particuliers, indépendants et petites structures à créer leur présence en ligne, améliorer leur sécurité numérique et résoudre leurs problèmes techniques sans jargon inutile.</p>
       <div class="actions">
-        <a class="button button-primary" href="contact.html">Décrire mon besoin</a>
+        <a class="button button-primary" href="reservation.html">Demander un rendez-vous</a>
         <a class="button button-secondary" href="services.html">Voir les services</a>
       </div>
       <ul class="trust-list" aria-label="Principes de service">
@@ -91,7 +103,7 @@
         <p class="eyebrow">Premier échange</p>
         <h2 id="contact-title">Parlons de votre projet ou de votre problème informatique.</h2>
       </div>
-      <a class="button button-primary" href="contact.html">Prendre contact</a>
+      <a class="button button-primary" href="reservation.html">Choisir un créneau</a>
     </section>
   </main>
 
@@ -99,6 +111,8 @@
     <p>© <span data-current-year>2026</span> Amin Darouiche.</p>
     <div class="footer-links">
       <a href="confidentialite.html">Confidentialité</a>
+      <a href="securite.html">Sécurité</a>
+      <a href="reservation.html">Rendez-vous</a>
       <a href="https://github.com/klark1152">GitHub</a>
     </div>
   </footer>

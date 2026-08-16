@@ -11,26 +11,13 @@ permissions:
 jobs:
   static-checks:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Check required pages and unsafe references
-        shell: bash
-        run: |
-          set -euo pipefail
+      - name: Validate JavaScript syntax
+        run: node --check script.js && node --check reservation.js && node --check scripts/validate-site.mjs
 
-          for page in index.html about.html services.html gallery.html contact.html confidentialite.html 404.html; do
-            test -f "$page" || { echo "Missing required page: $page"; exit 1; }
-          done
-
-          if grep -R -nE 'file:///|src="images/' --include='*.html' --include='*.css' .; then
-            echo "Found a local path or a reference to the missing images directory."
-            exit 1
-          fi
-
-          for page in *.html; do
-            [[ "$page" == google*.html ]] && continue
-            grep -q '<html lang="fr">' "$page" || { echo "Missing French language declaration: $page"; exit 1; }
-            grep -q '<title>' "$page" || { echo "Missing page title: $page"; exit 1; }
-          done
+      - name: Validate site structure and local references
+        run: node scripts/validate-site.mjs

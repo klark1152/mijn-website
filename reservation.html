@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demandez un rendez-vous avec Amin Darouiche pour un projet web, un conseil en sécurité ou une assistance informatique.">
+  <meta property="og:type" content="website"><meta property="og:locale" content="fr_BE">
+  <meta property="og:title" content="Demande de rendez-vous | Amin Darouiche"><meta property="og:description" content="Préparez une demande de rendez-vous sans compte, cookie ni stockage sur le site.">
+  <meta property="og:url" content="https://klark1152.github.io/mijn-website/reservation.html"><meta property="og:image" content="https://klark1152.github.io/mijn-website/og.png"><meta property="og:image:alt" content="Amin Darouiche — web, cybersécurité et assistance">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Demande de rendez-vous | Amin Darouiche"><meta name="twitter:description" content="Préparez une demande sans compte, cookie ni stockage sur le site."><meta name="twitter:image" content="https://klark1152.github.io/mijn-website/og.png">
+  <title>Demande de rendez-vous | Amin Darouiche</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="reservation.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Amin Darouiche, accueil">AD<span class="brand-dot">.</span></a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Méthode</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="reservation.html" aria-current="page">Rendez-vous</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero compact-hero">
+      <p class="eyebrow">Rendez-vous</p>
+      <h1>Préparez votre demande en quelques étapes.</h1>
+      <p>Choisissez un sujet et un créneau souhaité. La demande ouvre ensuite votre application e-mail : aucune donnée personnelle n'est enregistrée par ce site.</p>
+    </section>
+
+    <section class="section" aria-labelledby="booking-title">
+      <div class="booking-layout">
+        <form class="booking-card" id="booking-form" novalidate>
+          <h2 id="booking-title" class="visually-hidden">Demande de rendez-vous</h2>
+          <ol class="booking-progress" aria-label="Progression">
+            <li class="is-active" data-progress="1">Service</li>
+            <li data-progress="2">Créneau</li>
+            <li data-progress="3">Coordonnées</li>
+            <li data-progress="4">Vérification</li>
+          </ol>
+
+          <div class="booking-step" data-step="1">
+            <p class="eyebrow">Étape 1 sur 4</p>
+            <h2>Quel est votre besoin ?</h2>
+            <p>Ce choix sert uniquement à préparer l'échange.</p>
+            <div class="form-grid">
+              <div class="form-field is-wide">
+                <label for="booking-service">Type de rendez-vous</label>
+                <select id="booking-service" name="service" required>
+                  <option value="">Sélectionner un service</option>
+                  <option value="Appel découverte — 30 min">Appel découverte — 30 min</option>
+                  <option value="Projet de site web — 45 min">Projet de site web — 45 min</option>
+                  <option value="Conseil en sécurité — 45 min">Conseil en sécurité — 45 min</option>
+                  <option value="Assistance informatique — 30 min">Assistance informatique — 30 min</option>
+                </select>
+                <span class="field-error" id="service-error" hidden>Choisissez un type de rendez-vous.</span>
+              </div>
+              <div class="form-field">
+                <label for="booking-mode">Format souhaité</label>
+                <select id="booking-mode" name="mode" required>
+                  <option value="Visioconférence">Visioconférence</option>
+                  <option value="Téléphone">Téléphone</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="booking-timezone">Fuseau horaire</label>
+                <input id="booking-timezone" name="timezone" type="text" value="Europe/Brussels" readonly>
+              </div>
+            </div>
+            <div class="booking-actions">
+              <button class="button button-primary" type="button" data-next="2">Continuer</button>
+            </div>
+          </div>
+
+          <div class="booking-step" data-step="2" hidden>
+            <p class="eyebrow">Étape 2 sur 4</p>
+            <h2>Quel créneau préférez-vous ?</h2>
+            <p>Le créneau reste une demande jusqu'à confirmation par e-mail.</p>
+            <div class="form-grid">
+              <div class="form-field is-wide">
+                <label for="booking-date">Date souhaitée</label>
+                <input id="booking-date" name="date" type="date" required>
+                <span class="field-error" id="date-error" hidden>Choisissez un jour ouvré dans les 30 prochains jours.</span>
+              </div>
+              <fieldset class="form-field is-wide">
+                <legend class="field-label">Heure souhaitée</legend>
+                <div class="slot-grid" id="slot-grid" aria-describedby="slot-help"></div>
+                <p class="privacy-hint" id="slot-help">Heures affichées pour Europe/Brussels.</p>
+                <span class="field-error" id="slot-error" hidden>Choisissez une heure.</span>
+              </fieldset>
+            </div>
+            <div class="booking-actions">
+              <button class="button button-secondary" type="button" data-back="1">Retour</button>
+              <button class="button button-primary" type="button" data-next="3">Continuer</button>
+            </div>
+          </div>
+
+          <div class="booking-step" data-step="3" hidden>
+            <p class="eyebrow">Étape 3 sur 4</p>
+            <h2>Comment vous recontacter ?</h2>
+            <p>Seules les informations nécessaires à la réponse sont demandées.</p>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="booking-name">Nom</label>
+                <input id="booking-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+              </div>
+              <div class="form-field">
+                <label for="booking-email">Adresse e-mail</label>
+                <input id="booking-email" name="email" type="email" autocomplete="email" maxlength="120" required>
+              </div>
+              <div class="form-field is-wide">
+                <label for="booking-details">Contexte en quelques lignes</label>
+                <textarea id="booking-details" name="details" maxlength="1200" placeholder="Objectif, problème rencontré, outils concernés…" required></textarea>
+              </div>
+              <label class="form-field is-wide security-authorization" id="security-authorization" hidden>
+                <span><input id="booking-authorization" type="checkbox"> Je confirme être propriétaire du système concerné ou disposer d'une autorisation écrite pour demander ce conseil.</span>
+              </label>
+            </div>
+            <div class="booking-alert" id="contact-error" role="alert" hidden>Complétez correctement les champs obligatoires.</div>
+            <div class="booking-actions">
+              <button class="button button-secondary" type="button" data-back="2">Retour</button>
+              <button class="button button-primary" type="button" data-next="4">Vérifier</button>
+            </div>
+          </div>
+
+          <div class="booking-step" data-step="4" hidden>
+            <p class="eyebrow">Étape 4 sur 4</p>
+            <h2>Vérifiez votre demande</h2>
+            <p>Aucune réservation n'est confirmée tant que vous n'avez pas reçu une réponse.</p>
+            <dl class="booking-summary">
+              <div class="summary-row"><dt>Service</dt><dd id="summary-service"></dd></div>
+              <div class="summary-row"><dt>Format</dt><dd id="summary-mode"></dd></div>
+              <div class="summary-row"><dt>Créneau</dt><dd id="summary-slot"></dd></div>
+              <div class="summary-row"><dt>Nom</dt><dd id="summary-name"></dd></div>
+              <div class="summary-row"><dt>E-mail</dt><dd id="summary-email"></dd></div>
+              <div class="summary-row"><dt>Contexte</dt><dd id="summary-details"></dd></div>
+            </dl>
+            <label class="form-field privacy-hint">
+              <span><input id="booking-privacy" type="checkbox" required> J'ai lu la <a href="confidentialite.html">politique de confidentialité</a> et je comprends que la demande sera envoyée par mon application e-mail.</span>
+            </label>
+            <div class="booking-alert" id="privacy-error" role="alert" hidden>Confirmez avoir lu les informations de confidentialité.</div>
+            <div class="booking-actions">
+              <button class="button button-secondary" type="button" data-back="3">Modifier</button>
+              <button class="button button-primary" type="button" id="send-booking">Ouvrir mon e-mail</button>
+            </div>
+          </div>
+
+          <div class="booking-alert" id="booking-status" role="status" aria-live="polite" hidden></div>
+        </form>
+
+        <aside class="booking-aside" aria-labelledby="booking-security-title">
+          <p class="security-status">Confidentialité renforcée</p>
+          <h2 id="booking-security-title">Ce système ne stocke rien</h2>
+          <ul>
+            <li>aucune base de données ;</li>
+            <li>aucun compte à créer ;</li>
+            <li>aucun cookie publicitaire ;</li>
+            <li>aucune donnée envoyée en arrière-plan ;</li>
+            <li>confirmation humaine obligatoire.</li>
+          </ul>
+          <p>Pour une synchronisation calendrier en temps réel, un backend sécurisé et un accord de traitement des données seraient nécessaires.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span data-current-year>2026</span> Amin Darouiche.</p>
+    <div class="footer-links"><a href="securite.html">Sécurité</a><a href="confidentialite.html">Confidentialité</a><a href="https://github.com/klark1152">GitHub</a></div>
+  </footer>
+</body>
+</html>

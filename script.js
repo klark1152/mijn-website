@@ -14,6 +14,32 @@
     }
   });
 
+  const header = document.querySelector(".site-header");
+  const navigation = header?.querySelector("nav");
+  if (header && navigation) {
+    header.classList.add("has-nav-toggle");
+    navigation.id = navigation.id || "primary-navigation";
+    const navToggle = document.createElement("button");
+    navToggle.className = "nav-toggle";
+    navToggle.type = "button";
+    navToggle.textContent = "Menu";
+    navToggle.setAttribute("aria-controls", navigation.id);
+    navToggle.setAttribute("aria-expanded", "false");
+    header.insertBefore(navToggle, navigation);
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navigation.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        navigation.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
   const scrollButton = document.createElement("button");
   scrollButton.className = "scroll-top";
   scrollButton.type = "button";

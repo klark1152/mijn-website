@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Centre de sécurité du site d'Amin Darouiche : architecture, contrôles, limites et signalement responsable.">
+  <meta property="og:type" content="website"><meta property="og:locale" content="fr_BE">
+  <meta property="og:title" content="Centre de sécurité | Amin Darouiche"><meta property="og:description" content="Contrôles, référentiels, limites connues et signalement responsable.">
+  <meta property="og:url" content="https://klark1152.github.io/mijn-website/securite.html"><meta property="og:image" content="https://klark1152.github.io/mijn-website/og.png"><meta property="og:image:alt" content="Amin Darouiche — web, cybersécurité et assistance">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Centre de sécurité | Amin Darouiche"><meta name="twitter:description" content="Contrôles, référentiels, limites connues et signalement responsable."><meta name="twitter:image" content="https://klark1152.github.io/mijn-website/og.png">
+  <title>Centre de sécurité | Amin Darouiche</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Amin Darouiche, accueil">AD<span class="brand-dot">.</span></a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Méthode</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="reservation.html">Rendez-vous</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero compact-hero">
+      <p class="eyebrow">Centre de sécurité</p>
+      <h1>Réduire l'exposition avant d'ajouter des défenses.</h1>
+      <p>La sécurité absolue n'existe pas. Ce site privilégie une architecture minimale, des contrôles vérifiables et une communication transparente sur ses limites.</p>
+    </section>
+
+    <section class="section" aria-labelledby="controls-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Contrôles actuels</p><h2 id="controls-title">Défense en profondeur adaptée à un site statique</h2></div>
+        <p class="section-intro">Dernière revue documentaire : 16 août 2026. Ces mesures réduisent les risques mais ne constituent pas une garantie d'inviolabilité.</p>
+      </div>
+      <div class="security-grid">
+        <article class="security-control"><span class="security-status">Actif</span><h3>Surface d'attaque minimale</h3><p>Aucun backend, compte, mot de passe, paiement, base de données ou interface d'administration publique.</p></article>
+        <article class="security-control"><span class="security-status">Actif</span><h3>Minimisation des données</h3><p>La demande de rendez-vous est préparée localement et n'est transmise qu'après ouverture volontaire de l'application e-mail.</p></article>
+        <article class="security-control"><span class="security-status">Actif</span><h3>Politique de contenu</h3><p>Une Content Security Policy en balise meta limite scripts, styles, images et connexions aux ressources du même site.</p></article>
+        <article class="security-control"><span class="security-status">Actif</span><h3>Sans dépendance d'exécution tierce</h3><p>Aucun framework, tracker, widget publicitaire ou script chargé depuis un domaine extérieur.</p></article>
+        <article class="security-control"><span class="security-status">Actif</span><h3>Validation continue</h3><p>GitHub Actions vérifie les pages essentielles, la langue, les liens locaux et l'absence de chemins dangereux à chaque modification.</p></article>
+        <article class="security-control"><span class="security-status">Actif</span><h3>Signalement responsable</h3><p>Le fichier <a href=".well-known/security.txt">security.txt</a> fournit un canal public pour signaler une vulnérabilité.</p></article>
+      </div>
+    </section>
+
+    <section class="section split" aria-labelledby="standards-title">
+      <div><p class="eyebrow">Référentiels</p><h2 id="standards-title">Alignement, pas certification</h2></div>
+      <div class="prose">
+        <p>Les exigences techniques sont inspirées de l'<a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP ASVS 5.0</a> et du <a href="https://owasp.org/Top10/2025/">OWASP Top 10:2025</a>.</p>
+        <p>La protection des données suit les principes de minimisation, protection dès la conception et sécurité proportionnée au risque prévus par les articles 5, 25 et 32 du <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32016R0679">RGPD</a>.</p>
+        <p>L'accessibilité vise WCAG 2.2 niveau AA et tient compte de l'<a href="https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en">Acte européen sur l'accessibilité</a>. La directive <a href="https://digital-strategy.ec.europa.eu/fr/policies/nis2-directive">NIS2</a> est évaluée selon le secteur, la taille et le rôle réel de l'organisation ; elle ne s'applique pas automatiquement à tout site.</p>
+      </div>
+    </section>
+
+    <section class="section notice" aria-labelledby="limits-title">
+      <div><p class="eyebrow">Limites connues</p><h2 id="limits-title">Ce que GitHub Pages ne permet pas</h2></div>
+      <p>Les en-têtes HTTP avancés, la journalisation applicative, la limitation de débit, la synchronisation calendrier et l'authentification forte nécessitent un hébergement ou un backend configurables. Une future réservation temps réel devra donc être déployée séparément avec chiffrement, contrôle d'accès, journalisation, sauvegardes et contrat de traitement des données.</p>
+    </section>
+
+    <section class="section callout" aria-labelledby="report-title">
+      <div><p class="eyebrow">Vulnérabilité</p><h2 id="report-title">Vous avez identifié un problème de sécurité ?</h2></div>
+      <a class="button button-primary" href="mailto:amindarouiche2008@gmail.com?subject=Signalement%20de%20vuln%C3%A9rabilit%C3%A9">Signaler par e-mail</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span data-current-year>2026</span> Amin Darouiche.</p>
+    <div class="footer-links"><a href="confidentialite.html">Confidentialité</a><a href="reservation.html">Rendez-vous</a><a href="https://github.com/klark1152">GitHub</a></div>
+  </footer>
+</body>
+</html>

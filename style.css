@@ -31,7 +31,7 @@ body {
     radial-gradient(circle at 88% 28%, rgba(39, 159, 139, 0.12), transparent 24rem),
     var(--background);
   color: var(--ink);
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.7;
 }
 
@@ -42,6 +42,18 @@ a {
 :focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 4px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .skip-link {
@@ -74,7 +86,7 @@ a {
 
 .brand {
   color: var(--ink);
-  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -106,6 +118,23 @@ nav a:hover,
 nav a[aria-current="page"] {
   background: rgba(94, 231, 255, 0.09);
   color: var(--ink);
+}
+
+nav .nav-cta {
+  border: 1px solid rgba(94, 231, 255, 0.35);
+  color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
 }
 
 main {
@@ -167,7 +196,7 @@ p {
 h1,
 h2,
 h3 {
-  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 h1,
@@ -334,7 +363,7 @@ h3 {
   display: block;
   margin-bottom: 2.7rem;
   color: var(--accent);
-  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
 }
@@ -386,7 +415,7 @@ h3 {
   left: 0;
   color: var(--accent);
   content: "0" counter(steps);
-  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
 }
@@ -413,7 +442,7 @@ h3 {
 
 .service-index {
   color: var(--accent);
-  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: clamp(2.5rem, 7vw, 5rem);
   font-weight: 700;
   line-height: 1;
@@ -512,6 +541,256 @@ h3 {
   margin-top: 0;
 }
 
+.legal-updated {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18rem;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.booking-card,
+.booking-aside {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, rgba(18, 51, 80, 0.76), rgba(8, 27, 47, 0.78));
+  box-shadow: var(--shadow);
+}
+
+.booking-card {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.booking-aside {
+  position: sticky;
+  top: 1rem;
+  padding: 1.4rem;
+}
+
+.booking-aside h2 {
+  font-size: 1.25rem;
+}
+
+.booking-aside p,
+.booking-aside li,
+.privacy-hint {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.booking-aside ul {
+  margin: 1rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.booking-progress {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 0 2rem;
+  padding: 0;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.booking-progress li {
+  padding-top: 0.6rem;
+  border-top: 3px solid var(--line);
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.booking-progress li.is-active,
+.booking-progress li.is-complete {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+.booking-step[hidden] {
+  display: none;
+}
+
+.booking-step h2 {
+  margin-bottom: 0.7rem;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+.booking-step > p {
+  color: var(--muted);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.form-field.is-wide {
+  grid-column: 1 / -1;
+}
+
+fieldset.form-field {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.form-field label,
+.field-label {
+  color: var(--ink);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.72rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  background: rgba(3, 16, 29, 0.72);
+  color: var(--ink);
+  font: inherit;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  min-height: auto;
+  margin-right: 0.4rem;
+  accent-color: var(--accent);
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 0.65rem;
+  gap: 0.6rem;
+}
+
+.slot-button {
+  min-height: 3rem;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  background: rgba(3, 16, 29, 0.72);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.slot-button:hover,
+.slot-button[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: rgba(94, 231, 255, 0.12);
+  color: var(--accent);
+}
+
+.booking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  gap: 0.7rem;
+}
+
+.booking-actions .button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.booking-summary {
+  display: grid;
+  margin: 1.5rem 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.summary-row {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  padding-block: 0.8rem;
+  border-bottom: 1px solid var(--line);
+  gap: 1rem;
+}
+
+.summary-row dt {
+  color: var(--muted);
+}
+
+.summary-row dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.booking-alert {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(120, 239, 177, 0.3);
+  border-radius: 0.65rem;
+  background: rgba(120, 239, 177, 0.07);
+  color: var(--ink);
+}
+
+.field-error {
+  color: #ffb3b3;
+  font-size: 0.82rem;
+}
+
+.security-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.security-control {
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(10, 35, 57, 0.62);
+}
+
+.security-control p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.security-status {
+  display: inline-flex;
+  margin-bottom: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(120, 239, 177, 0.1);
+  color: var(--success);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 footer {
   display: flex;
   width: min(calc(100% - 2rem), var(--content));
@@ -604,6 +883,18 @@ footer a {
   .callout .button {
     justify-self: start;
   }
+
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-aside {
+    position: static;
+  }
+
+  .security-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 36rem) {
@@ -611,8 +902,26 @@ footer a {
     display: grid;
   }
 
-  nav {
-    justify-content: flex-start;
+  .nav-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 0.65rem;
+    display: inline-flex;
+  }
+
+  .site-header.has-nav-toggle nav {
+    display: none;
+    padding-top: 0.5rem;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .site-header.has-nav-toggle nav.is-open {
+    display: flex;
+  }
+
+  .site-header nav a {
+    width: 100%;
   }
 
   .hero,
@@ -637,6 +946,16 @@ footer a {
   footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .form-grid,
+  .slot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
   }
 }
 
