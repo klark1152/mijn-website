@@ -1,61 +1,91 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creatieve diensten van Amin Darouiche: fotografie, beeldbewerking, grafisch ontwerp en eenvoudige websites.">
-  <title>Diensten | Amin Darouiche</title>
+  <meta name="description" content="Services de création web, conseil en cybersécurité et assistance informatique pour particuliers et petites structures.">
+  <title>Services informatiques | Amin Darouiche</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Ga naar de inhoud</a>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Amin Darouiche, startpagina">AD</a>
-    <nav aria-label="Hoofdnavigatie">
-      <a href="index.html">Home</a>
-      <a href="about.html">Over mij</a>
-      <a href="services.html" aria-current="page">Diensten</a>
-      <a href="gallery.html">Galerij</a>
+    <a class="brand" href="index.html" aria-label="Amin Darouiche, accueil">AD<span class="brand-dot">.</span></a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="gallery.html">Méthode</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main id="main-content">
     <section class="page-hero">
-      <p class="eyebrow">Diensten</p>
-      <h1>Van eerste idee tot een heldere visuele uitwerking.</h1>
-      <p>Ik help met kleine creatieve projecten en denk graag mee over een passende, eenvoudige aanpak.</p>
+      <p class="eyebrow">Services informatiques</p>
+      <h1>Des solutions adaptées à votre situation.</h1>
+      <p>Le contenu de chaque intervention est défini après un premier échange. Vous savez ce qui sera fait, pourquoi et avec quelles limites.</p>
     </section>
 
-    <section class="section" aria-labelledby="services-title">
-      <div class="section-heading">
-        <p class="eyebrow">Wat ik doe</p>
-        <h2 id="services-title">Creatieve ondersteuning</h2>
-      </div>
-      <div class="card-grid">
-        <article class="card"><span class="card-number" aria-hidden="true">01</span><h3>Fotografie</h3><p>Beelden voor een persoonlijk project, portfolio of online presentatie.</p></article>
-        <article class="card"><span class="card-number" aria-hidden="true">02</span><h3>Foto-editing</h3><p>Zorgvuldige correcties van licht, kleur, uitsnede en sfeer.</p></article>
-        <article class="card"><span class="card-number" aria-hidden="true">03</span><h3>Grafisch ontwerp</h3><p>Eenvoudige visuele concepten voor posters, socials en presentaties.</p></article>
-        <article class="card"><span class="card-number" aria-hidden="true">04</span><h3>Web</h3><p>Heldere statische websites met HTML, CSS en JavaScript.</p></article>
+    <section class="service-section" id="web" aria-labelledby="web-title">
+      <div class="service-index">01</div>
+      <div class="service-content">
+        <p class="eyebrow">Création web</p>
+        <h2 id="web-title">Un site professionnel, rapide et facile à comprendre</h2>
+        <p>Pour présenter une activité, un service, une association, un événement ou un projet personnel.</p>
+        <ul class="check-list">
+          <li>site vitrine responsive pour mobile et ordinateur ;</li>
+          <li>structure, textes et appels à l'action clairs ;</li>
+          <li>accessibilité, performance et référencement de base ;</li>
+          <li>mise en ligne et explications pour la maintenance.</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section callout" aria-labelledby="service-contact-title">
-      <div>
-        <p class="eyebrow">Project bespreken</p>
-        <h2 id="service-contact-title">Vertel wat je wilt maken</h2>
+    <section class="service-section" id="securite" aria-labelledby="security-title">
+      <div class="service-index">02</div>
+      <div class="service-content">
+        <p class="eyebrow">Sécurité numérique</p>
+        <h2 id="security-title">Identifier les risques et renforcer l'essentiel</h2>
+        <p>Un diagnostic pratique pour mieux protéger vos comptes, appareils, sauvegardes ou votre site.</p>
+        <ul class="check-list">
+          <li>revue des mises à jour, sauvegardes et accès ;</li>
+          <li>configuration des mots de passe et de l'authentification multifacteur ;</li>
+          <li>vérification des réglages visibles d'un site ou service ;</li>
+          <li>recommandations classées par priorité et niveau d'effort.</li>
+        </ul>
+        <p class="security-note"><strong>Cadre éthique :</strong> tout test actif exige l'accord écrit du propriétaire. Aucune sécurité ne peut être garantie à 100 %.</p>
       </div>
-      <a class="button button-primary" href="contact.html">Neem contact op</a>
+    </section>
+
+    <section class="service-section" id="assistance" aria-labelledby="support-title">
+      <div class="service-index">03</div>
+      <div class="service-content">
+        <p class="eyebrow">Assistance & conseil</p>
+        <h2 id="support-title">Résoudre un problème et vous rendre plus autonome</h2>
+        <p>Une aide ponctuelle pour comprendre une situation, choisir un outil ou remettre de l'ordre dans un environnement numérique.</p>
+        <ul class="check-list">
+          <li>aide au choix d'un ordinateur, logiciel ou service ;</li>
+          <li>configuration et organisation des outils numériques ;</li>
+          <li>diagnostic initial d'un problème technique ;</li>
+          <li>documentation et conseils pour éviter qu'il se répète.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section callout" aria-labelledby="quote-title">
+      <div><p class="eyebrow">Demande personnalisée</p><h2 id="quote-title">Expliquez votre besoin pour obtenir une proposition adaptée.</h2></div>
+      <a class="button button-primary" href="contact.html">Parler du projet</a>
     </section>
   </main>
 
   <footer>
     <p>© <span data-current-year>2026</span> Amin Darouiche.</p>
-    <a href="https://github.com/klark1152">GitHub</a>
+    <div class="footer-links"><a href="confidentialite.html">Confidentialité</a><a href="https://github.com/klark1152">GitHub</a></div>
   </footer>
 </body>
 </html>

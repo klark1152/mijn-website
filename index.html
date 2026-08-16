@@ -1,79 +1,106 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio van Amin Darouiche: fotografie, tekeningen, grafisch ontwerp en webprojecten.">
+  <meta name="description" content="Création de sites web, conseil en sécurité numérique et assistance informatique pour particuliers, indépendants et petites structures.">
   <meta name="author" content="Amin Darouiche">
-  <meta name="theme-color" content="#0b1020">
-  <title>Amin Darouiche | Creatief portfolio</title>
+  <meta name="theme-color" content="#07111f">
+  <title>Amin Darouiche | Services informatiques & sécurité</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Ga naar de inhoud</a>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
 
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Amin Darouiche, startpagina">AD</a>
-    <nav aria-label="Hoofdnavigatie">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="about.html">Over mij</a>
-      <a href="services.html">Diensten</a>
-      <a href="gallery.html">Galerij</a>
+    <a class="brand" href="index.html" aria-label="Amin Darouiche, accueil">AD<span class="brand-dot">.</span></a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html" aria-current="page">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Méthode</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main id="main-content">
     <section class="hero">
-      <p class="eyebrow">Fotografie · tekenen · digitaal</p>
-      <h1>Ik geef ideeën een visuele vorm.</h1>
-      <p class="hero-copy">Welkom. Ik ben Amin Darouiche, een creatieve maker met interesse in fotografie, tekenen, grafisch ontwerp en web.</p>
+      <p class="eyebrow">Web · cybersécurité · assistance</p>
+      <h1>Une informatique claire, fiable et sécurisée.</h1>
+      <p class="hero-copy">J'aide les particuliers, indépendants et petites structures à créer leur présence en ligne, améliorer leur sécurité numérique et résoudre leurs problèmes techniques sans jargon inutile.</p>
       <div class="actions">
-        <a class="button button-primary" href="gallery.html">Bekijk mijn werk</a>
-        <a class="button button-secondary" href="contact.html">Neem contact op</a>
+        <a class="button button-primary" href="contact.html">Décrire mon besoin</a>
+        <a class="button button-secondary" href="services.html">Voir les services</a>
       </div>
+      <ul class="trust-list" aria-label="Principes de service">
+        <li>Solutions adaptées</li>
+        <li>Explications compréhensibles</li>
+        <li>Sécurité avec autorisation</li>
+      </ul>
     </section>
 
-    <section class="section" aria-labelledby="focus-title">
+    <section class="section" aria-labelledby="services-title">
       <div class="section-heading">
-        <p class="eyebrow">Mijn focus</p>
-        <h2 id="focus-title">Creativiteit met aandacht voor detail</h2>
+        <div>
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title">Un accompagnement numérique à taille humaine</h2>
+        </div>
+        <p class="section-intro">Un interlocuteur unique pour cadrer le besoin, construire la solution et vous expliquer comment l'utiliser.</p>
       </div>
       <div class="card-grid">
         <article class="card">
           <span class="card-number" aria-hidden="true">01</span>
-          <h3>Fotografie</h3>
-          <p>Beelden maken die sfeer, vorm en kleine details zichtbaar maken.</p>
+          <h3>Création de sites web</h3>
+          <p>Sites vitrines rapides et responsive pour présenter une activité, un projet ou des services.</p>
+          <a class="text-link" href="services.html#web">Découvrir l'offre web</a>
         </article>
         <article class="card">
           <span class="card-number" aria-hidden="true">02</span>
-          <h3>Tekenen</h3>
-          <p>Ideeën onderzoeken met lijn, compositie en een eigen visuele stijl.</p>
+          <h3>Conseil en sécurité</h3>
+          <p>Diagnostic de base, bonnes pratiques, durcissement et plan d'amélioration priorisé.</p>
+          <a class="text-link" href="services.html#securite">Voir le périmètre</a>
         </article>
         <article class="card">
           <span class="card-number" aria-hidden="true">03</span>
-          <h3>Digitaal</h3>
-          <p>Eenvoudige, duidelijke ontwerpen voor grafische en webprojecten.</p>
+          <h3>Assistance informatique</h3>
+          <p>Aide au choix, configuration, dépannage et accompagnement pour gagner en autonomie.</p>
+          <a class="text-link" href="services.html#assistance">Consulter les possibilités</a>
         </article>
       </div>
     </section>
 
-    <section class="section callout" aria-labelledby="project-title">
+    <section class="section process" aria-labelledby="process-title">
       <div>
-        <p class="eyebrow">Samenwerken</p>
-        <h2 id="project-title">Een creatief idee in gedachten?</h2>
+        <p class="eyebrow">Méthode</p>
+        <h2 id="process-title">Du besoin à une solution utilisable</h2>
       </div>
-      <a class="button button-primary" href="contact.html">Vertel me erover</a>
+      <ol class="process-list">
+        <li><strong>Écouter</strong><span>Comprendre votre contexte, vos priorités et vos contraintes.</span></li>
+        <li><strong>Proposer</strong><span>Présenter une solution claire, son périmètre et les prochaines étapes.</span></li>
+        <li><strong>Réaliser</strong><span>Construire, tester et documenter ce qui a été mis en place.</span></li>
+        <li><strong>Accompagner</strong><span>Vous transmettre les clés pour utiliser et maintenir la solution.</span></li>
+      </ol>
+    </section>
+
+    <section class="section callout" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow">Premier échange</p>
+        <h2 id="contact-title">Parlons de votre projet ou de votre problème informatique.</h2>
+      </div>
+      <a class="button button-primary" href="contact.html">Prendre contact</a>
     </section>
   </main>
 
   <footer>
     <p>© <span data-current-year>2026</span> Amin Darouiche.</p>
-    <a href="https://github.com/klark1152">GitHub</a>
+    <div class="footer-links">
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="https://github.com/klark1152">GitHub</a>
+    </div>
   </footer>
 </body>
 </html>

@@ -18,7 +18,7 @@
   scrollButton.className = "scroll-top";
   scrollButton.type = "button";
   scrollButton.textContent = "↑";
-  scrollButton.setAttribute("aria-label", "Terug naar boven");
+  scrollButton.setAttribute("aria-label", "Revenir en haut de la page");
   document.body.append(scrollButton);
 
   const updateScrollButton = () => {
