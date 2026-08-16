@@ -1383,11 +1383,43 @@ textarea:focus {
   font-size: 1.8rem;
 }
 
+.diagnostic-auto-hint {
+  display: flex;
+  margin: 0 0 1rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid rgba(94, 231, 255, 0.16);
+  border-radius: 0.65rem;
+  background: rgba(94, 231, 255, 0.045);
+  color: var(--muted);
+  font-size: 0.78rem;
+  gap: 0.55rem;
+}
+
+.diagnostic-auto-hint span {
+  color: var(--accent);
+  font-weight: 800;
+}
+
 .diagnostic-question {
   margin: 0;
-  padding: 1.2rem 0;
+  padding: 1.2rem 0.75rem;
   border: 0;
   border-top: 1px solid var(--line);
+  border-radius: 0.65rem;
+  scroll-margin-top: 7rem;
+  transition: background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.diagnostic-question.is-current {
+  background: rgba(94, 231, 255, 0.045);
+  box-shadow: inset 3px 0 var(--accent);
+}
+
+.diagnostic-question.is-answered legend::after {
+  float: right;
+  color: var(--success);
+  content: "✓";
+  font-weight: 800;
 }
 
 .diagnostic-question legend {
@@ -1432,6 +1464,7 @@ textarea:focus {
   display: flex;
   margin-top: 1.5rem;
   gap: 0.7rem;
+  scroll-margin-top: 7rem;
 }
 
 .diagnostic-actions .button {
