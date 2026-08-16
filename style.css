@@ -365,6 +365,34 @@ h3 {
   margin-top: 2rem;
 }
 
+.email-tools {
+  display: grid;
+  grid-template-columns: minmax(0, 25rem) auto;
+  gap: 0.65rem;
+  align-items: center;
+  max-width: 38rem;
+  margin-top: 1rem;
+}
+
+.email-tools .email-address {
+  min-height: 3rem;
+  font-family: ui-monospace, "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+.email-tools .button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.email-feedback {
+  grid-column: 1 / -1;
+  min-height: 1.4rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .button {
   display: inline-flex;
   min-height: 3rem;
@@ -398,6 +426,17 @@ h3 {
 }
 
 .button-secondary:hover {
+  border-color: rgba(94, 231, 255, 0.45);
+  background: rgba(94, 231, 255, 0.07);
+}
+
+.button-quiet {
+  border-color: var(--line);
+  background: rgba(5, 25, 41, 0.78);
+  color: var(--ink);
+}
+
+.button-quiet:hover {
   border-color: rgba(94, 231, 255, 0.45);
   background: rgba(94, 231, 255, 0.07);
 }
@@ -1792,6 +1831,14 @@ footer a {
 }
 
 @media (max-width: 36rem) {
+  .email-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .email-feedback {
+    grid-column: auto;
+  }
+
   .site-header {
     display: grid;
   }

@@ -47,7 +47,7 @@ Ouvrez ensuite `http://localhost:8000`.
 - `index.html` : présentation générale ;
 - `services.html` : offres et périmètre d'intervention ;
 - `gallery.html` : exemples de missions et méthode ;
-- `contact.html` : prise de contact ;
+- `contact.html` et `contact.js` : contact par e-mail avec message prérempli et copie de secours ;
 - `diagnostic.html` et `diagnostic.js` : auto-évaluation locale des pratiques de sécurité ;
 - `reservation.html` et `reservation.js` : parcours de demande de rendez-vous ;
 - `securite.html` : contrôles, référentiels et limites de sécurité ;

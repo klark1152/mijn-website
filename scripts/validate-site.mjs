@@ -8,6 +8,7 @@ const requiredFiles = [
   "services.html",
   "gallery.html",
   "contact.html",
+  "contact.js",
   "diagnostic.html",
   "diagnostic.js",
   "reservation.html",

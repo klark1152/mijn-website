@@ -13,6 +13,7 @@
   <title>Contact | Amin Darouiche</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <script src="contact.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Aller au contenu</a>
@@ -35,7 +36,13 @@
       <p>Site web, problème technique, amélioration de sécurité ou simple question : envoyez un message avec les informations principales pour préparer un premier échange utile.</p>
       <div class="actions">
         <a class="button button-primary" href="reservation.html">Demander un rendez-vous</a>
-        <a class="button button-secondary" href="mailto:amindarouiche2008@gmail.com?subject=Demande%20de%20service%20informatique">Envoyer un e-mail</a>
+        <a class="button button-secondary" data-email-button href="mailto:amindarouiche2008@gmail.com?subject=Demande%20de%20service%20informatique&amp;body=Bonjour%20Amin%2C%0A%0AMon%20besoin%20%3A%20%0A%0AMon%20d%C3%A9lai%20%3A%20%0A">Envoyer un e-mail</a>
+      </div>
+      <div class="email-tools" aria-label="Adresse e-mail de contact">
+        <label class="visually-hidden" for="contact-email">Adresse e-mail</label>
+        <input class="email-address" id="contact-email" data-email-address type="text" value="amindarouiche2008@gmail.com" readonly>
+        <button class="button button-quiet" data-copy-email type="button">Copier l'adresse</button>
+        <p class="email-feedback" data-email-feedback role="status" aria-live="polite">Le message s'ouvre dans votre application e-mail. Aucune donnée n'est envoyée par ce site.</p>
       </div>
     </section>
 
