@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Centre de sécurité du site d'Amin Darouiche : architecture, contrôles, limites et signalement responsable.">
+  <meta property="og:type" content="website"><meta property="og:locale" content="fr_BE">
+  <meta property="og:title" content="Centre de sécurité | Amin Darouiche"><meta property="og:description" content="Contrôles, référentiels, limites connues et signalement responsable.">
+  <meta property="og:url" content="https://klark1152.github.io/mijn-website/securite.html"><meta property="og:image" content="https://klark1152.github.io/mijn-website/og.png"><meta property="og:image:alt" content="Amin Darouiche — web, cybersécurité et assistance">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Centre de sécurité | Amin Darouiche"><meta name="twitter:description" content="Contrôles, référentiels, limites connues et signalement responsable."><meta name="twitter:image" content="https://klark1152.github.io/mijn-website/og.png">
+  <title>Centre de sécurité | Amin Darouiche</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="site-header">
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="diagnostic.html">Diagnostic</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="account.html">Espace client</a>
+      <a class="nav-cta" href="reservation.html">Rendez-vous</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero compact-hero">
+      <p class="eyebrow">Centre de sécurité</p>
+      <h1>Réduire l'exposition avant d'ajouter des défenses.</h1>
+      <p>La sécurité absolue n'existe pas. Ce site privilégie une architecture minimale, des contrôles vérifiables et une communication transparente sur ses limites.</p>
+    </section>
+
+    <section class="section" aria-labelledby="controls-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Contrôles actuels</p><h2 id="controls-title">Défense en profondeur adaptée à un site statique</h2></div>
+        <p class="section-intro">Dernière revue documentaire : 16 août 2026. Ces mesures réduisent les risques mais ne constituent pas une garantie d'inviolabilité.</p>
+      </div>
+      <div class="security-grid">
+        <article class="security-control"><span class="security-status">Préparé</span><h3>Identité déléguée</h3><p>L'espace client délègue l'authentification à Supabase, Google ou Apple. Aucun mot de passe de ces fournisseurs n'est reçu ni stocké par ce site.</p></article>
+        <article class="security-control"><span class="security-status">Actif</span><h3>Minimisation des données</h3><p>La demande de rendez-vous est préparée localement et n'est transmise qu'après ouverture volontaire de l'application e-mail.</p></article>
+        <article class="security-control"><span class="security-status">Actif</span><h3>Politique de contenu</h3><p>Une Content Security Policy en balise meta limite scripts, styles et images au site. Seule la page du compte autorise une connexion vers le domaine Supabase configuré.</p></article>
+        <article class="security-control"><span class="security-status">Actif</span><h3>Dépendance maîtrisée</h3><p>Le client officiel Supabase est conservé localement dans une version précise. Aucun tracker, widget publicitaire ou script distant n'est chargé à l'ouverture de la page.</p></article>
+        <article class="security-control"><span class="security-status">Actif</span><h3>Validation continue</h3><p>GitHub Actions vérifie les pages essentielles, la langue, les liens locaux et l'absence de chemins dangereux à chaque modification.</p></article>
+        <article class="security-control"><span class="security-status">Actif</span><h3>Signalement responsable</h3><p>Le fichier <a href=".well-known/security.txt">security.txt</a> fournit un canal public pour signaler une vulnérabilité.</p></article>
+        <article class="security-control"><span class="security-status">Local</span><h3>Diagnostic sans transmission</h3><p>Les réponses et le score de l'<a href="diagnostic.html">auto-évaluation</a> sont calculés dans la page, sans stockage ni requête réseau.</p></article>
+      </div>
+    </section>
+
+    <section class="section split" aria-labelledby="standards-title">
+      <div><p class="eyebrow">Référentiels</p><h2 id="standards-title">Alignement, pas certification</h2></div>
+      <div class="prose">
+        <p>Les exigences techniques sont inspirées de l'<a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP ASVS 5.0</a> et du <a href="https://owasp.org/Top10/2025/">OWASP Top 10:2025</a>.</p>
+        <p>La protection des données suit les principes de minimisation, protection dès la conception et sécurité proportionnée au risque prévus par les articles 5, 25 et 32 du <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32016R0679">RGPD</a>.</p>
+        <p>L'accessibilité vise WCAG 2.2 niveau AA et tient compte de l'<a href="https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en">Acte européen sur l'accessibilité</a>. La directive <a href="https://digital-strategy.ec.europa.eu/fr/policies/nis2-directive">NIS2</a> est évaluée selon le secteur, la taille et le rôle réel de l'organisation ; elle ne s'applique pas automatiquement à tout site.</p>
+      </div>
+    </section>
+
+    <section class="section notice" aria-labelledby="limits-title">
+      <div><p class="eyebrow">Limites connues</p><h2 id="limits-title">Ce que GitHub Pages ne permet pas</h2></div>
+      <p>GitHub Pages peut afficher l'interface de connexion, mais ne peut pas protéger seul un document sensible ni décider des autorisations côté serveur. Tout futur contenu privé devra rester derrière les contrôles d'accès et les politiques de sécurité Supabase. Les comptes demeurent inactifs tant que les fournisseurs et les URL de retour ne sont pas configurés.</p>
+    </section>
+
+    <section class="section callout" aria-labelledby="report-title">
+      <div><p class="eyebrow">Vulnérabilité</p><h2 id="report-title">Vous avez identifié un problème de sécurité ?</h2></div>
+      <a class="button button-primary" href="mailto:amindarouiche2008@gmail.com?subject=Signalement%20de%20vuln%C3%A9rabilit%C3%A9">Signaler par e-mail</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span data-current-year>2026</span> Amin Darouiche.</p>
+    <div class="footer-links"><a href="confidentialite.html">Confidentialité</a><a href="reservation.html">Rendez-vous</a><a href="https://github.com/klark1152">GitHub</a></div>
+  </footer>
+</body>
+</html>

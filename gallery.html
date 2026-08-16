@@ -1,57 +1,86 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Galerij en creatieve richtingen van Amin Darouiche.">
-  <title>Galerij | Amin Darouiche</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Méthode de travail et exemples de missions pour les services informatiques d'Amin Darouiche.">
+  <meta property="og:type" content="website"><meta property="og:locale" content="fr_BE">
+  <meta property="og:title" content="Méthode & missions | Amin Darouiche"><meta property="og:description" content="Comprendre, prioriser, réaliser et expliquer chaque mission informatique.">
+  <meta property="og:url" content="https://klark1152.github.io/mijn-website/gallery.html"><meta property="og:image" content="https://klark1152.github.io/mijn-website/og.png"><meta property="og:image:alt" content="Amin Darouiche — web, cybersécurité et assistance">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Méthode & missions | Amin Darouiche"><meta name="twitter:description" content="Comprendre, prioriser, réaliser et expliquer chaque mission informatique."><meta name="twitter:image" content="https://klark1152.github.io/mijn-website/og.png">
+  <title>Méthode & missions | Amin Darouiche</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Ga naar de inhoud</a>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Amin Darouiche, startpagina">AD</a>
-    <nav aria-label="Hoofdnavigatie">
-      <a href="index.html">Home</a>
-      <a href="about.html">Over mij</a>
-      <a href="services.html">Diensten</a>
-      <a href="gallery.html" aria-current="page">Galerij</a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="diagnostic.html">Diagnostic</a>
+      <a href="about.html">À propos</a>
       <a href="contact.html">Contact</a>
+      <a href="account.html">Espace client</a>
+      <a class="nav-cta" href="reservation.html">Rendez-vous</a>
     </nav>
   </header>
 
   <main id="main-content">
     <section class="page-hero">
-      <p class="eyebrow">Galerij</p>
-      <h1>Een portfolio in opbouw.</h1>
-      <p>De ontbrekende lokale afbeeldingen zijn verwijderd, zodat de pagina geen gebroken beelden meer toont. Nieuwe, originele projecten krijgen hier binnenkort hun plek.</p>
+      <p class="eyebrow">Méthode de travail</p>
+      <h1>Comprendre, prioriser, réaliser, expliquer.</h1>
+      <p>Une mission informatique utile ne se résume pas à installer un outil. Elle doit répondre à un besoin précis et rester compréhensible après l'intervention.</p>
     </section>
 
-    <section class="section" aria-labelledby="directions-title">
+    <section class="section" aria-labelledby="examples-title">
       <div class="section-heading">
-        <p class="eyebrow">Creatieve richtingen</p>
-        <h2 id="directions-title">Waar ik momenteel aan werk</h2>
+        <div><p class="eyebrow">Exemples</p><h2 id="examples-title">Types de missions possibles</h2></div>
+        <p class="section-intro">Ces exemples décrivent des prestations possibles. Ils ne sont pas présentés comme des missions clients déjà réalisées.</p>
       </div>
-      <div class="gallery-grid">
-        <article class="gallery-card"><div class="art-panel art-photo" aria-hidden="true"></div><p class="gallery-type">Fotografie</p><h3>Licht en stedelijke details</h3><p>Een toekomstige reeks over lijnen, schaduwen en alledaagse architectuur.</p></article>
-        <article class="gallery-card"><div class="art-panel art-drawing" aria-hidden="true"></div><p class="gallery-type">Tekenen</p><h3>Vormstudies</h3><p>Schetsen waarin compositie, ritme en contrast centraal staan.</p></article>
-        <article class="gallery-card"><div class="art-panel art-digital" aria-hidden="true"></div><p class="gallery-type">Digitaal</p><h3>Visuele experimenten</h3><p>Kleur, typografie en eenvoudige vormen gecombineerd voor het web.</p></article>
+      <div class="case-grid">
+        <article class="case-card">
+          <p class="case-tag">Web</p>
+          <h3>Site vitrine pour une activité indépendante</h3>
+          <p>Structurer l'offre, créer les pages essentielles, optimiser le mobile et accompagner la mise en ligne.</p>
+          <ul><li>Objectif clair</li><li>Design responsive</li><li>SEO de base</li></ul>
+        </article>
+        <article class="case-card">
+          <p class="case-tag">Sécurité</p>
+          <h3>Diagnostic de sécurité numérique</h3>
+          <p>Examiner les accès, sauvegardes et réglages principaux, puis fournir un plan d'action priorisé.</p>
+          <ul><li>État des lieux</li><li>Risques prioritaires</li><li>Recommandations</li></ul>
+        </article>
+        <article class="case-card">
+          <p class="case-tag">Assistance</p>
+          <h3>Organisation d'un environnement de travail</h3>
+          <p>Choisir les bons outils, structurer les fichiers et mettre en place une sauvegarde compréhensible.</p>
+          <ul><li>Choix des outils</li><li>Configuration</li><li>Guide d'utilisation</li></ul>
+        </article>
       </div>
     </section>
 
-    <section class="section callout" aria-labelledby="follow-title">
-      <div><p class="eyebrow">Volg de groei</p><h2 id="follow-title">Bekijk de code en nieuwe updates op GitHub</h2></div>
-      <a class="button button-primary" href="https://github.com/klark1152/mijn-website">Open repository</a>
+    <section class="section process" aria-labelledby="steps-title">
+      <div><p class="eyebrow">Étapes</p><h2 id="steps-title">Un déroulement prévisible</h2></div>
+      <ol class="process-list">
+        <li><strong>Échange initial</strong><span>Contexte, objectif, contraintes et niveau d'urgence.</span></li>
+        <li><strong>Périmètre</strong><span>Actions prévues, limites, livrables et autorisations nécessaires.</span></li>
+        <li><strong>Réalisation</strong><span>Mise en œuvre progressive avec vérifications.</span></li>
+        <li><strong>Restitution</strong><span>Résumé des changements, recommandations et prochaines étapes.</span></li>
+      </ol>
+    </section>
+
+    <section class="section callout" aria-labelledby="method-contact-title">
+      <div><p class="eyebrow">Votre situation</p><h2 id="method-contact-title">Vous ne savez pas encore quelle solution choisir ?</h2></div>
+      <a class="button button-primary" href="reservation.html">Réserver un échange découverte</a>
     </section>
   </main>
 
   <footer>
     <p>© <span data-current-year>2026</span> Amin Darouiche.</p>
-    <a href="https://github.com/klark1152">GitHub</a>
+    <div class="footer-links"><a href="securite.html">Sécurité</a><a href="confidentialite.html">Confidentialité</a><a href="reservation.html">Rendez-vous</a><a href="https://github.com/klark1152">GitHub</a></div>
   </footer>
 </body>
 </html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://klark1152.github.io/mijn-website/sitemap.xml

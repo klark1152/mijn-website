@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src https://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Connectez-vous à votre espace client Amin Darouiche avec Google, Apple ou un lien sécurisé par e-mail.">
+  <meta name="robots" content="noindex,follow">
+  <meta property="og:type" content="website"><meta property="og:locale" content="fr_BE">
+  <meta property="og:title" content="Espace client | Amin Darouiche"><meta property="og:description" content="Un accès privé pour suivre vos demandes et préparer vos rendez-vous.">
+  <meta property="og:url" content="https://klark1152.github.io/mijn-website/account.html"><meta property="og:image" content="https://klark1152.github.io/mijn-website/og.png"><meta property="og:image:alt" content="Amin Darouiche — web, cybersécurité et assistance">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Espace client | Amin Darouiche"><meta name="twitter:description" content="Un accès privé pour suivre vos demandes et préparer vos rendez-vous."><meta name="twitter:image" content="https://klark1152.github.io/mijn-website/og.png">
+  <title>Espace client | Amin Darouiche</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/supabase-2.112.3.js" defer></script>
+  <script src="auth-config.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="account.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="site-header">
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="diagnostic.html">Diagnostic</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="account.html" aria-current="page">Espace client</a>
+      <a class="nav-cta" href="reservation.html">Rendez-vous</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero compact-hero account-hero">
+      <p class="eyebrow">Espace client</p>
+      <h1>Votre suivi, dans un espace privé.</h1>
+      <p>Connectez-vous sans créer un nouveau mot de passe. Google, Apple ou un lien temporaire envoyé par e-mail vérifient votre identité.</p>
+      <ul class="auth-assurances" aria-label="Principes de sécurité">
+        <li>Connexion chiffrée</li>
+        <li>Aucun mot de passe stocké ici</li>
+        <li>Déconnexion à tout moment</li>
+      </ul>
+    </section>
+
+    <section class="section account-layout" aria-labelledby="account-access-title">
+      <div class="account-intro">
+        <p class="eyebrow">Accès simplifié</p>
+        <h2 id="account-access-title">Une seule identité pour vos échanges.</h2>
+        <p>Votre compte permettra de retrouver vos demandes, préparer un rendez-vous et centraliser les prochaines étapes d'une mission.</p>
+        <ul class="check-list">
+          <li>suivi de vos demandes ;</li>
+          <li>historique des rendez-vous ;</li>
+          <li>coordonnées modifiables ;</li>
+          <li>accès protégé aux futurs documents.</li>
+        </ul>
+      </div>
+
+      <div class="auth-card" data-auth-root aria-busy="false">
+        <div class="auth-card-heading">
+          <span class="auth-lock" aria-hidden="true">●</span>
+          <div><p>Accès privé</p><h2>Connexion ou création de compte</h2></div>
+        </div>
+
+        <div class="auth-setup-notice" data-auth-setup hidden>
+          <strong>Prévisualisation sécurisée</strong>
+          <p>L'interface est terminée. Les boutons seront activés après l'ajout des identifiants publics Supabase.</p>
+        </div>
+
+        <div data-auth-guest>
+          <div class="auth-provider-list">
+            <button class="auth-provider" type="button" data-auth-provider="google"><span class="provider-mark provider-google" aria-hidden="true">G</span><span>Continuer avec Google</span><small data-auth-provider-state>Vérification…</small></button>
+            <button class="auth-provider" type="button" data-auth-provider="apple"><span class="provider-mark provider-apple" aria-hidden="true">A</span><span>Continuer avec Apple</span><small data-auth-provider-state>Vérification…</small></button>
+          </div>
+
+          <div class="auth-divider"><span>ou</span></div>
+
+          <form class="auth-email-form" data-auth-email-form>
+            <label for="account-email">Adresse e-mail</label>
+            <input id="account-email" data-auth-email name="email" type="email" autocomplete="email" inputmode="email" placeholder="vous@exemple.be" required>
+            <button class="button button-primary" type="submit">Recevoir un lien sécurisé</button>
+          </form>
+          <p class="auth-legal">En continuant, vous acceptez l'utilisation de votre adresse uniquement pour gérer votre compte et vos demandes. Consultez la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+        </div>
+
+        <div class="auth-user" data-auth-user hidden>
+          <div class="auth-profile">
+            <span class="auth-avatar" data-auth-user-initial aria-hidden="true">A</span>
+            <div><p data-auth-user-email>Compte connecté</p><span data-auth-user-provider>Connexion sécurisée</span></div>
+          </div>
+          <div class="auth-user-actions">
+            <a class="button button-primary" href="reservation.html">Préparer un rendez-vous</a>
+            <a class="button button-secondary" href="diagnostic.html">Lancer le diagnostic</a>
+            <button class="button button-quiet" data-auth-signout type="button">Se déconnecter</button>
+          </div>
+        </div>
+
+        <p class="auth-status" data-auth-status data-tone="neutral" role="status" aria-live="polite">Choisissez votre méthode de connexion.</p>
+      </div>
+    </section>
+
+    <section class="section notice account-security" aria-labelledby="account-security-title">
+      <div><p class="eyebrow">Protection</p><h2 id="account-security-title">Une connexion sobre et vérifiable</h2></div>
+      <p>Le site ne reçoit jamais votre mot de passe Google ou Apple. L'authentification est déléguée au fournisseur choisi et la session reste limitée à cet espace client.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span data-current-year>2026</span> Amin Darouiche.</p>
+    <div class="footer-links"><a href="securite.html">Sécurité</a><a href="confidentialite.html">Confidentialité</a><a href="contact.html">Contact</a></div>
+  </footer>
+</body>
+</html>
