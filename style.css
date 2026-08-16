@@ -181,7 +181,7 @@ nav .nav-cta {
 }
 
 main {
-  overflow: hidden;
+  overflow: clip;
 }
 
 .hero,
@@ -866,7 +866,8 @@ textarea {
   font: inherit;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
   width: auto;
   min-height: auto;
   margin-right: 0.4rem;
@@ -1347,6 +1348,15 @@ textarea:focus {
   align-items: start;
 }
 
+.diagnostic-hero {
+  padding-block: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.diagnostic-hero h1 {
+  max-width: 18ch;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+}
+
 .diagnostic-form,
 .diagnostic-result {
   border: 1px solid var(--line);
@@ -1605,6 +1615,33 @@ footer p {
 footer a {
   color: var(--ink);
   text-underline-offset: 0.25rem;
+}
+
+@media (max-width: 62rem) {
+  .site-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-header.has-nav-toggle nav {
+    display: none;
+    grid-column: 1 / -1;
+    padding-top: 0.5rem;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .site-header.has-nav-toggle nav.is-open {
+    display: flex;
+  }
+
+  .site-header nav a {
+    width: 100%;
+  }
 }
 
 .scroll-top {
