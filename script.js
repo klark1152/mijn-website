@@ -32,6 +32,19 @@
       navToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape" || !navigation.classList.contains("is-open")) return;
+      navigation.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.focus();
+    });
+
+    document.addEventListener("click", (event) => {
+      if (header.contains(event.target)) return;
+      navigation.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+
     navigation.addEventListener("click", (event) => {
       if (event.target.closest("a")) {
         navigation.classList.remove("is-open");
