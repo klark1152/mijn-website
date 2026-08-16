@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diensten</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neem contact op met Amin Darouiche voor een creatief project of samenwerking.">
+  <title>Contact | Amin Darouiche</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-    <!-- Navigation Menu -->
-    <nav>
-        <a href="about.html">Over mij</a>
-        <a href="services.html">Diensten</a>
-        <a href="gallery.html">Galerij</a>
-        <a href="testimonials.html">Getuigenissen</a>
-        <a href="contact.html">Contact</a>
+  <a class="skip-link" href="#main-content">Ga naar de inhoud</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Amin Darouiche, startpagina">AD</a>
+    <nav aria-label="Hoofdnavigatie">
+      <a href="index.html">Home</a>
+      <a href="about.html">Over mij</a>
+      <a href="services.html">Diensten</a>
+      <a href="gallery.html">Galerij</a>
+      <a href="contact.html" aria-current="page">Contact</a>
     </nav>
+  </header>
 
-     <!-- Contact Section -->
-     <section class="contact" id="contact">
-        <h2>Neem contact op</h2>
-        <p>Voor samenwerkingen of vragen, neem gerust contact met mij op!</p>
-        <a href="mailto:amindarouiche2008@gmail.com">Stuur een e-mail</a>
+  <main id="main-content">
+    <section class="page-hero contact-hero">
+      <p class="eyebrow">Contact</p>
+      <h1>Laten we iets moois maken.</h1>
+      <p>Heb je een idee, vraag of creatieve samenwerking in gedachten? Stuur een korte e-mail met wat je wilt maken en wanneer.</p>
+      <div class="actions">
+        <a class="button button-primary" href="mailto:amindarouiche2008@gmail.com?subject=Creatieve%20samenwerking">Stuur een e-mail</a>
+        <a class="button button-secondary" href="https://github.com/klark1152">Bekijk GitHub</a>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Amin Darouiche. Alle rechten voorbehouden.</p>
-    </footer>
+    <section class="section split" aria-labelledby="message-title">
+      <div><p class="eyebrow">Handig om te vermelden</p><h2 id="message-title">Zo kan ik sneller meedenken</h2></div>
+      <ul class="check-list">
+        <li>Wat is het doel van je project?</li>
+        <li>Welke stijl of sfeer zoek je?</li>
+        <li>Welke bestanden of formaten heb je nodig?</li>
+        <li>Is er een gewenste planning?</li>
+      </ul>
+    </section>
+  </main>
 
+  <footer>
+    <p>© <span data-current-year>2026</span> Amin Darouiche.</p>
+    <a href="https://github.com/klark1152">GitHub</a>
+  </footer>
 </body>
 </html>

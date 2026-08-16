@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diensten</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creatieve diensten van Amin Darouiche: fotografie, beeldbewerking, grafisch ontwerp en eenvoudige websites.">
+  <title>Diensten | Amin Darouiche</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-    <!-- Navigation Menu -->
-    <nav>
-        <a href="about.html">Over mij</a>
-        <a href="services.html">Diensten</a>
-        <a href="gallery.html">Galerij</a>
-        <a href="testimonials.html">Getuigenissen</a>
-        <a href="contact.html">Contact</a>
+  <a class="skip-link" href="#main-content">Ga naar de inhoud</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Amin Darouiche, startpagina">AD</a>
+    <nav aria-label="Hoofdnavigatie">
+      <a href="index.html">Home</a>
+      <a href="about.html">Over mij</a>
+      <a href="services.html" aria-current="page">Diensten</a>
+      <a href="gallery.html">Galerij</a>
+      <a href="contact.html">Contact</a>
     </nav>
+  </header>
 
-    <!-- Services Section -->
-    <section class="section">
-        <h2>Wat ik doe</h2>
-        <p>Naast mijn kunstwerken bied ik ook diensten aan zoals codeur, foto-editing en grafisch ontwerp.</p>
+  <main id="main-content">
+    <section class="page-hero">
+      <p class="eyebrow">Diensten</p>
+      <h1>Van eerste idee tot een heldere visuele uitwerking.</h1>
+      <p>Ik help met kleine creatieve projecten en denk graag mee over een passende, eenvoudige aanpak.</p>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Amin Darouiche. Alle rechten voorbehouden.</p>
-    </footer>
-    <script src="script.js"></script>
+    <section class="section" aria-labelledby="services-title">
+      <div class="section-heading">
+        <p class="eyebrow">Wat ik doe</p>
+        <h2 id="services-title">Creatieve ondersteuning</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card"><span class="card-number" aria-hidden="true">01</span><h3>Fotografie</h3><p>Beelden voor een persoonlijk project, portfolio of online presentatie.</p></article>
+        <article class="card"><span class="card-number" aria-hidden="true">02</span><h3>Foto-editing</h3><p>Zorgvuldige correcties van licht, kleur, uitsnede en sfeer.</p></article>
+        <article class="card"><span class="card-number" aria-hidden="true">03</span><h3>Grafisch ontwerp</h3><p>Eenvoudige visuele concepten voor posters, socials en presentaties.</p></article>
+        <article class="card"><span class="card-number" aria-hidden="true">04</span><h3>Web</h3><p>Heldere statische websites met HTML, CSS en JavaScript.</p></article>
+      </div>
+    </section>
+
+    <section class="section callout" aria-labelledby="service-contact-title">
+      <div>
+        <p class="eyebrow">Project bespreken</p>
+        <h2 id="service-contact-title">Vertel wat je wilt maken</h2>
+      </div>
+      <a class="button button-primary" href="contact.html">Neem contact op</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span data-current-year>2026</span> Amin Darouiche.</p>
+    <a href="https://github.com/klark1152">GitHub</a>
+  </footer>
 </body>
 </html>
