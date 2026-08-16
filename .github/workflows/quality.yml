@@ -20,7 +20,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          for page in index.html about.html services.html gallery.html contact.html 404.html; do
+          for page in index.html about.html services.html gallery.html contact.html confidentialite.html 404.html; do
             test -f "$page" || { echo "Missing required page: $page"; exit 1; }
           done
 
@@ -31,6 +31,6 @@ jobs:
 
           for page in *.html; do
             [[ "$page" == google*.html ]] && continue
-            grep -q '<html lang="nl">' "$page" || { echo "Missing Dutch language declaration: $page"; exit 1; }
+            grep -q '<html lang="fr">' "$page" || { echo "Missing French language declaration: $page"; exit 1; }
             grep -q '<title>' "$page" || { echo "Missing page title: $page"; exit 1; }
           done
