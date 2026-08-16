@@ -1881,6 +1881,20 @@ textarea:focus {
   transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
 }
 
+.auth-provider > span:not(.provider-mark) {
+  padding-inline: 2.25rem;
+}
+
+.auth-provider small {
+  position: absolute;
+  right: 0.85rem;
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .auth-provider:hover:not(:disabled) {
   border-color: rgba(94, 231, 255, 0.45);
   background: rgba(94, 231, 255, 0.07);
@@ -2221,6 +2235,10 @@ footer a {
 }
 
 @media (max-width: 36rem) {
+  .auth-provider small {
+    display: none;
+  }
+
   .email-tools {
     grid-template-columns: 1fr;
   }

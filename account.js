@@ -8,13 +8,15 @@
   const status = root.querySelector("[data-auth-status]");
   const emailForm = root.querySelector("[data-auth-email-form]");
   const emailInput = root.querySelector("[data-auth-email]");
+  const emailSubmit = emailForm.querySelector("button");
   const providerButtons = [...root.querySelectorAll("[data-auth-provider]")];
   const signOutButton = root.querySelector("[data-auth-signout]");
   const userEmail = root.querySelector("[data-auth-user-email]");
   const userProvider = root.querySelector("[data-auth-user-provider]");
   const userInitial = root.querySelector("[data-auth-user-initial]");
-  const controls = [...providerButtons, emailForm.querySelector("button")];
+  const controls = [...providerButtons, emailSubmit];
   const config = window.AUTH_CONFIG || {};
+  const enabledProviders = new Set();
 
   const setStatus = (message, tone = "neutral") => {
     status.textContent = message;
@@ -22,9 +24,10 @@
   };
 
   const setBusy = (busy) => {
-    controls.forEach((control) => {
-      control.disabled = busy;
+    providerButtons.forEach((button) => {
+      button.disabled = busy || !enabledProviders.has(button.dataset.authProvider);
     });
+    emailSubmit.disabled = busy;
     root.setAttribute("aria-busy", String(busy));
   };
 
@@ -61,6 +64,36 @@
   const redirectUrl = new URL("account.html", window.location.href);
   redirectUrl.search = "";
   redirectUrl.hash = "";
+
+  const refreshProviderAvailability = async () => {
+    providerButtons.forEach((button) => {
+      button.disabled = true;
+    });
+    try {
+      const response = await fetch(`${config.supabaseUrl}/auth/v1/settings`, {
+        headers: { apikey: config.supabasePublishableKey },
+      });
+      if (!response.ok) throw new Error("Provider settings unavailable");
+      const settings = await response.json();
+      providerButtons.forEach((button) => {
+        const provider = button.dataset.authProvider;
+        const isEnabled = settings.external?.[provider] === true;
+        if (isEnabled) enabledProviders.add(provider);
+        button.disabled = !isEnabled;
+        button.querySelector("[data-auth-provider-state]").textContent = isEnabled ? "Disponible" : "À configurer";
+      });
+      if (!guestPanel.hidden && !enabledProviders.size) {
+        setStatus("La connexion par e-mail est active. Google et Apple attendent leur configuration fournisseur.");
+      }
+    } catch {
+      providerButtons.forEach((button) => {
+        button.querySelector("[data-auth-provider-state]").textContent = "Indisponible";
+      });
+      if (!guestPanel.hidden) {
+        setStatus("La connexion par e-mail reste disponible. Impossible de vérifier Google et Apple pour le moment.");
+      }
+    }
+  };
 
   const renderSession = (session) => {
     const user = session?.user;
@@ -135,4 +168,6 @@
     }
     renderSession(data.session);
   });
+
+  refreshProviderAvailability();
 })();
