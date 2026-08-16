@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Validate JavaScript syntax
-        run: node --check script.js && node --check contact.js && node --check reservation.js && node --check diagnostic.js && node --check scripts/validate-site.mjs
+        run: node --check script.js && node --check account.js && node --check auth-config.js && node --check contact.js && node --check reservation.js && node --check diagnostic.js && node --check scripts/validate-site.mjs
 
       - name: Validate site structure and local references
         run: node scripts/validate-site.mjs

@@ -1,9 +1,13 @@
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { dirname, extname, join, normalize, relative, resolve } from "node:path";
+import { createHash } from "node:crypto";
 
 const root = resolve(import.meta.dirname, "..");
 const requiredFiles = [
   "index.html",
+  "account.html",
+  "account.js",
+  "auth-config.js",
   "about.html",
   "services.html",
   "gallery.html",
@@ -20,6 +24,9 @@ const requiredFiles = [
   "sitemap.xml",
   "og.png",
   "og-site.webp",
+  "vendor/supabase-2.112.3.js",
+  "vendor/SUPABASE-LICENSE.txt",
+  "vendor/SUPABASE-SHA256.txt",
   ".nojekyll",
   ".well-known/security.txt",
 ];
@@ -31,6 +38,13 @@ for (const file of requiredFiles) {
 
 if (existsSync(join(root, "og-site.webp")) && statSync(join(root, "og-site.webp")).size > 150_000) {
   errors.push("og-site.webp : l'image d'accueil dépasse le budget de 150 Ko");
+}
+
+const supabaseClientPath = join(root, "vendor", "supabase-2.112.3.js");
+if (existsSync(supabaseClientPath)) {
+  const expectedHash = "EC004176D101AEC77AEEF266AA1C94411287FE2039C65EA5F6C72F5E14B3847D";
+  const actualHash = createHash("sha256").update(readFileSync(supabaseClientPath)).digest("hex").toUpperCase();
+  if (actualHash !== expectedHash) errors.push("vendor/supabase-2.112.3.js : empreinte SHA-256 inattendue");
 }
 
 const pages = readdirSync(root)
